@@ -1,10 +1,11 @@
 #include <limits.h>
 #include <stdio.h>
 
+/* FLAGS */
 #define F_MINUS 1
-#define F_PLUS  2
-#define F_ZERO  4
-#define F_HASH  8
+#define F_PLUS 2
+#define F_ZERO 4
+#define F_HASH 8
 #define F_SPACE 16
 
 /**
@@ -54,17 +55,17 @@ int get_flags(const char *format, int *i)
  */
 int main(void)
 {
-    unsigned int ui;
+    unsigned int vim;
     void *addr;
     int i, flags;
 
     printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
+    vim = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
-    printf("Negative:[%d]\n", -762534);
-    printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Negative:[%d]\n", -892534);
+    printf("Unsigned:[%u]\n", vim);
+    printf("Unsigned octal:[%o]\n", vim);
+    printf("Unsigned hexadecimal:[%x, %X]\n", vim, vim);
     printf("Character:[%c]\n", 'H');
     printf("String:[%s]\n", "I am a string !");
     printf("Address:[%p]\n", addr);
@@ -78,5 +79,4 @@ int main(void)
 
     return (0);
 }
-
 
